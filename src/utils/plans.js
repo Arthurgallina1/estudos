@@ -1,7 +1,5 @@
-const name = "james";
-
-const person = {
-  first: name,
+const obj = {
+  foo: 'bar',
 };
 
-const sayLint = (arg) => console.log("oi");
+console.log(obj);

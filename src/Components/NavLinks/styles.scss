@@ -1,0 +1,16 @@
+nav {
+  height: 60px;
+  background: #666;
+  color: white;
+}
+
+ul {
+  display: flex;
+  list-style: none !important;
+  li {
+    padding: 5px;
+    &:hover {
+      background: white;
+    }
+  }
+}
