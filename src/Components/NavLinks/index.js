@@ -5,7 +5,6 @@ import { LoginContext } from '../../LoginContext';
 
 export default function NavLinks() {
   const context = useContext(LoginContext);
-  console.log(context);
   const style = {
     borderBottom: '2px solid white',
     color: 'red',
@@ -21,6 +20,9 @@ export default function NavLinks() {
         </NavLink>
         <NavLink to="/protected" activeStyle={style}>
           <li>Comp3</li>
+        </NavLink>
+        <NavLink to="/c3" activeStyle={style}>
+          <li>Comp4</li>
         </NavLink>
       </ul>
     </nav>

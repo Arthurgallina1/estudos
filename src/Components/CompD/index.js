@@ -7,18 +7,18 @@ export default function Comp2() {
   //   let history = useHistory();
   const params = useParams();
   //   const loc = useLocation();
-  useEffect(
-    () =>
-      // console.log(params),
-      console.log(logged),
+  // useEffect(
+  //   () =>
+  //     // console.log(params),
+  //     console.log(logged),
 
-    []
-  );
+  //   []
+  // );
   return (
     <div>
       <h1>comp2</h1>
       <button type="button" onClick={setLogin}>
-        LOGIN
+        {logged ? 'LOGOUT' : 'LOGIN'}
       </button>
       <Link to="/">
         <button type="button">back</button>
