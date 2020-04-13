@@ -3,7 +3,7 @@ import { Link, useHistory, useParams, useLocation } from 'react-router-dom';
 import { LoginContext } from '../../LoginContext';
 
 export default function Comp2() {
-  const { logged, setLogin } = useContext(LoginContext);
+  const { logged, setLogin, active } = useContext(LoginContext);
   //   let history = useHistory();
   const params = useParams();
   //   const loc = useLocation();
@@ -16,7 +16,10 @@ export default function Comp2() {
   // );
   return (
     <div>
-      <h1>comp2</h1>
+      <h1>
+        comp2
+        <br /> {active}
+      </h1>
       <button type="button" onClick={setLogin}>
         {logged ? 'LOGOUT' : 'LOGIN'}
       </button>

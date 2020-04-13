@@ -8,14 +8,18 @@ import { LoginContext } from './LoginContext';
 
 function App() {
   const [logged, setLogged] = useState(false);
+  const [active, setActive] = useState(0);
 
   function setLogin() {
     setLogged(!logged);
   }
+  function actFunc(n) {
+    setActive(n);
+  }
 
   return (
     <div>
-      <LoginContext.Provider value={{ logged, setLogin }}>
+      <LoginContext.Provider value={{ logged, setLogin, active, actFunc }}>
         <Router history={history}>
           <NavLinks />
           <Routes />
