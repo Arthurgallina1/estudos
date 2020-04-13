@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
+    "@testing-library/jest-dom": "^5.5.0",
+    "@testing-library/react": "^10.0.2",
     "@testing-library/user-event": "^7.1.2",
     "eslint-plugin-react": "^7.19.0",
     "history": "^4.10.1",
@@ -23,7 +23,11 @@
   },
   "jest": {
     "testMatch": [
-      "./__test__/*.test.js"
+      "**/_tests/**/*.test.js"
+    ],
+    "setupFIlesAfterEnv": [
+      "@testing-lbrary/react/cleanup-after-each",
+      "@testing-library/jest-dom/extend-expect"
     ]
   },
   "browserslist": {
