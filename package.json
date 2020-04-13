@@ -10,18 +10,21 @@
     "history": "^4.10.1",
     "node-sass": "^4.13.1",
     "react": "^16.13.1",
+    "react-app-rewired": "^2.1.5",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "jest": {
+    "testMatch": [
+      "./__test__/*.test.js"
+    ]
   },
   "browserslist": {
     "production": [
