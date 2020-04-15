@@ -18,7 +18,8 @@ export default function Comp2() {
     <div>
       <h1>
         comp2
-        <br /> {active}
+        <br />
+        {active}
       </h1>
       <button type="button" onClick={setLogin}>
         {logged ? 'LOGOUT' : 'LOGIN'}

@@ -12,8 +12,10 @@
     "react": "^16.13.1",
     "react-app-rewired": "^2.1.5",
     "react-dom": "^16.13.1",
+    "react-redux": "^7.2.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "redux": "^4.0.5"
   },
   "scripts": {
     "start": "react-app-rewired start",
@@ -25,9 +27,8 @@
     "testMatch": [
       "**/_tests/**/*.test.js"
     ],
-    "setupFIlesAfterEnv": [
-      "@testing-lbrary/react/cleanup-after-each",
-      "@testing-library/jest-dom/extend-expect"
+    "setupFilesAfterEnv": [
+      "jest-localstorage-mock"
     ]
   },
   "browserslist": {
@@ -43,6 +44,7 @@
     ]
   },
   "devDependencies": {
+    "@types/jest": "^25.2.1",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-airbnb-base": "^14.1.0",

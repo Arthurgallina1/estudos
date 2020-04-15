@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-export default function TechList() {
+export default function TechListRedux() {
   const [techs, setTechs] = useState([]);
   const [newTech, setNewTech] = useState([]);
 

@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { LoginContext } from '../../LoginContext';
+
 export default function Comp1() {
   const { actFunc, active } = useContext(LoginContext);
   actFunc(2);
@@ -9,7 +10,7 @@ export default function Comp1() {
       {active}
       <h1>comp1</h1>
       <Link to="/protected">
-        <button>SEND</button>
+        <button type="button">SEND</button>
       </Link>
     </div>
   );
