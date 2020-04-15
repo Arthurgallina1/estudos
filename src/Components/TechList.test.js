@@ -14,7 +14,6 @@ describe('TechList component', () => {
       <TechList />
     );
 
-    // debug();
     // <label htmlFor="tech"> Tech </label> getByLabelText que ai pega o input
     fireEvent.change(getByLabelText('Tech'), { target: { value: 'Node.js' } });
     fireEvent.submit(getByTestId('tech-form'));
