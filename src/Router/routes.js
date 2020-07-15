@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import CompUm from '../Components/CompUm';
 import CompD from '../Components/CompD';
 import ComponenteQ from '../Components/ComponenteQ';
+import Comp5 from '../Components/Comp5';
 import Protected from '../Components/Protected';
 import PrivateRoute from './PrivateRoute';
 import { LoginContext } from '../LoginContext';
@@ -14,6 +15,7 @@ export default function Routes() {
       <Route path="/" exact component={CompUm} />
       <Route path="/c2/:id" exact component={CompD} />
       <Route path="/c3" component={ComponenteQ} />
+      <Route path="/c5" component={Comp5} />
       <PrivateRoute path="/protected" auth={logged}>
         <Protected />
       </PrivateRoute>

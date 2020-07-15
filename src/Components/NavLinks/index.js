@@ -24,6 +24,9 @@ export default function NavLinks() {
         <NavLink to="/c3" activeStyle={style}>
           <li>Comp4</li>
         </NavLink>
+        <NavLink to="/c5" activeStyle={style}>
+          <li>Comp5</li>
+        </NavLink>
       </ul>
     </nav>
   );
