@@ -1,8 +1,11 @@
 import React, { useRef, useEffect, useCallback } from 'react';
+import Input from './input';
+import Modal from './modal';
 
 export default function ComponenteUseRef() {
   const nameInputRef = useRef(null);
   const acepptTermsRef = useRef({ value: false });
+  const modalRef = useRef(null);
 
   useEffect(() => {}, []);
 
@@ -18,6 +21,10 @@ export default function ComponenteUseRef() {
     acepptTermsRef.current.value = !acepptTermsRef.current.value;
   }, []);
 
+  const openModal = useCallback(() => {
+    modalRef.current.handleModalState();
+  }, []);
+
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -25,6 +32,16 @@ export default function ComponenteUseRef() {
         <button type="submit">Enviar</button>
         <button type="button" onClick={handleAcceptTerms}>
           Aceitar
+        </button>
+        <Input
+          placeholder="filho"
+          label="Input "
+          name="Input"
+          ref={nameInputRef}
+        />
+        <Modal ref={modalRef} />
+        <button type="button" onClick={openModal}>
+          Abrir
         </button>
       </form>
     </div>
