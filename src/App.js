@@ -5,6 +5,7 @@ import Routes from './Router/routes';
 import history from './history';
 import NavLinks from './Components/NavLinks';
 import { LoginContext } from './LoginContext';
+import ErrorBoundaries from './Components/Comp6Error/Boundaries';
 
 function App() {
   const [logged, setLogged] = useState(false);
@@ -20,10 +21,12 @@ function App() {
   return (
     <div>
       <LoginContext.Provider value={{ logged, setLogin, active, actFunc }}>
-        <Router history={history}>
-          <NavLinks />
-          <Routes />
-        </Router>
+        <ErrorBoundaries>
+          <Router history={history}>
+            <NavLinks />
+            <Routes />
+          </Router>
+        </ErrorBoundaries>
       </LoginContext.Provider>
     </div>
   );

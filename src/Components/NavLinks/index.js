@@ -27,6 +27,9 @@ export default function NavLinks() {
         <NavLink to="/c5" activeStyle={style}>
           <li>Comp5</li>
         </NavLink>
+        <NavLink to="/c6" activeStyle={style}>
+          <li>Comp6 - Error Boundaries</li>
+        </NavLink>
       </ul>
     </nav>
   );
