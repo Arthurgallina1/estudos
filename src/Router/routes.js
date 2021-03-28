@@ -9,6 +9,7 @@ import Protected from '../Components/Protected';
 import PrivateRoute from './PrivateRoute';
 import { LoginContext } from '../LoginContext';
 import Comp6 from '../Components/Comp6Error';
+import ForwardRef from '../Components/ForwardRef';
 
 export default function Routes() {
   const { logged } = useContext(LoginContext);
@@ -20,6 +21,7 @@ export default function Routes() {
       <Route path="/c5" component={Comp5} />
       <Route path="/useref" component={CompUseRef} />
       <Route path="/c6" component={Comp6} />
+      <Route path="/fref" component={ForwardRef} />
       <PrivateRoute path="/protected" auth={logged}>
         <Protected />
       </PrivateRoute>

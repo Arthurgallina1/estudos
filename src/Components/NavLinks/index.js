@@ -30,6 +30,9 @@ export default function NavLinks() {
         <NavLink to="/c6" activeStyle={style}>
           <li>Comp6 - Error Boundaries</li>
         </NavLink>
+        <NavLink to="/fref" activeStyle={style}>
+          <li>Forward Ref</li>
+        </NavLink>
       </ul>
     </nav>
   );
