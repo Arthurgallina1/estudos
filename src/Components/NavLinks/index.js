@@ -33,6 +33,9 @@ export default function NavLinks() {
         <NavLink to="/fref" activeStyle={style}>
           <li>Forward Ref</li>
         </NavLink>
+        <NavLink to="/reducer" activeStyle={style}>
+          <li>Reducer</li>
+        </NavLink>
       </ul>
     </nav>
   );
