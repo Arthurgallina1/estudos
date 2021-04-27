@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-/* eslint-disable */
 
 export default function useFetch(url, options) {
   const [response, setResponse] = useState(null);
@@ -11,6 +10,7 @@ export default function useFetch(url, options) {
       const json = await res.json();
       setResponse(json);
       setLoading(false);
+      console.log('api fetched');
     })();
   }, [url, options]);
 
