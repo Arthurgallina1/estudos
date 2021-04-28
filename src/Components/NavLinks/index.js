@@ -36,6 +36,9 @@ export default function NavLinks() {
         <NavLink to="/reducer" activeStyle={style}>
           <li>Reducer</li>
         </NavLink>
+        <NavLink to="/context" activeStyle={style}>
+          <li>Context Render</li>
+        </NavLink>
       </ul>
     </nav>
   );

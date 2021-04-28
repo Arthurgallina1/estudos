@@ -6,6 +6,7 @@ import history from './history';
 import NavLinks from './Components/NavLinks';
 import { LoginContext } from './LoginContext';
 import ErrorBoundaries from './Components/Comp6Error/Boundaries';
+import { TestContextProvider, TestContextTwoProvider } from './LoginContext';
 
 function App() {
   const [logged, setLogged] = useState(false);
@@ -20,14 +21,18 @@ function App() {
 
   return (
     <div>
-      <LoginContext.Provider value={{ logged, setLogin, active, actFunc }}>
-        <ErrorBoundaries>
-          <Router history={history}>
-            <NavLinks />
-            <Routes />
-          </Router>
-        </ErrorBoundaries>
-      </LoginContext.Provider>
+      <TestContextTwoProvider>
+        <TestContextProvider>
+          <LoginContext.Provider value={{ logged, setLogin, active, actFunc }}>
+            <ErrorBoundaries>
+              <Router history={history}>
+                <NavLinks />
+                <Routes />
+              </Router>
+            </ErrorBoundaries>
+          </LoginContext.Provider>
+        </TestContextProvider>
+      </TestContextTwoProvider>
     </div>
   );
 }

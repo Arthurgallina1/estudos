@@ -11,6 +11,7 @@ import { LoginContext } from '../LoginContext';
 import Comp6 from '../Components/Comp6Error';
 import ForwardRef from '../Components/ForwardRef';
 import Reducer from '../Components/useReducer';
+import ContextRender from '../Components/ContextRender';
 
 export default function Routes() {
   const { logged } = useContext(LoginContext);
@@ -24,6 +25,7 @@ export default function Routes() {
       <Route path="/c6" component={Comp6} />
       <Route path="/fref" component={ForwardRef} />
       <Route path="/reducer" component={Reducer} />
+      <Route path="/context" component={ContextRender} />
       <PrivateRoute path="/protected" auth={logged}>
         <Protected />
       </PrivateRoute>
