@@ -24,7 +24,7 @@ export default function DragNDrop() {
           <Card key={card.id} image={card} />
         ))}
 
-        <Dropable></Dropable>
+        <Dropable />
       </div>
     </DndProvider>
   );
@@ -35,7 +35,7 @@ const Dropable = ({ x, y, children }) => {
     accept: ItemTypes.ITEM,
     collect: (monitor) => ({
       isOver: !!monitor.isOver(),
-      //   drop: (item, monitor) => console.log(item),
+      drop: (item, monitor) => console.log(item),
       //   drop: (item, monitor) => {
       //     console.log('item dropped', item);
       //   },
