@@ -14,3 +14,17 @@
 //     // }
 //   }
 // }
+
+.navbar {
+    width: 100%;
+}
+.link-item {
+            padding: 5px;
+            &:hover {
+              background: white;
+            }
+}
+.ul-list {
+      display: flex;
+  list-style: none !important;
+}

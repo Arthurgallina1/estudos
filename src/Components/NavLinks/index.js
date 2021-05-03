@@ -10,34 +10,37 @@ export default function NavLinks() {
     color: 'red',
   };
   return (
-    <nav>
-      <ul>
+    <nav className="navbar">
+      <ul className="ul-list">
         <NavLink to="/" activeStyle={style} exact>
-          <li>Comp1</li>
+          <li className="link-item">Comp1</li>
         </NavLink>
         <NavLink to="/c2/c2" activeStyle={style}>
-          <li>Comp2</li>
+          <li className="link-item">Comp2</li>
         </NavLink>
         <NavLink to="/protected" activeStyle={style}>
-          <li>Comp3</li>
+          <li className="link-item">Comp3</li>
         </NavLink>
         <NavLink to="/c3" activeStyle={style}>
-          <li>Comp4</li>
+          <li className="link-item">Comp4</li>
         </NavLink>
         <NavLink to="/c5" activeStyle={style}>
-          <li>Comp5</li>
+          <li className="link-item">Comp5</li>
         </NavLink>
         <NavLink to="/c6" activeStyle={style}>
-          <li>Comp6 - Error Boundaries</li>
+          <li className="link-item">Comp6 - Error Boundaries</li>
         </NavLink>
         <NavLink to="/fref" activeStyle={style}>
-          <li>Forward Ref</li>
+          <li className="link-item">Forward Ref</li>
         </NavLink>
         <NavLink to="/reducer" activeStyle={style}>
-          <li>Reducer</li>
+          <li className="link-item">Reducer</li>
         </NavLink>
         <NavLink to="/context" activeStyle={style}>
-          <li>Context Render</li>
+          <li className="link-item">Context Render</li>
+        </NavLink>
+        <NavLink to="/dnd" activeStyle={style}>
+          <li className="link-item">Drag and Drop</li>
         </NavLink>
       </ul>
     </nav>

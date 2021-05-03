@@ -1,0 +1,19 @@
+.card-item {
+    border: 1px solid red;
+}
+
+.grid {
+    width: 100%;
+    background: grey;
+    border: 1px solid black;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+
+    .dropabble {
+        background: white;
+        grid-column: 1 / 3;
+    }
+
+}
