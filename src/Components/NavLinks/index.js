@@ -42,6 +42,9 @@ export default function NavLinks() {
         <NavLink to="/dnd" activeStyle={style}>
           <li className="link-item">Drag and Drop</li>
         </NavLink>
+        <NavLink to="/zustand" activeStyle={style}>
+          <li className="link-item">Zustand</li>
+        </NavLink>
       </ul>
     </nav>
   );

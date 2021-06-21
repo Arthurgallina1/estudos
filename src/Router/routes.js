@@ -13,6 +13,7 @@ import ForwardRef from '../Components/ForwardRef';
 import CompDND from '../Components/CompDND';
 import Reducer from '../Components/useReducer';
 import ContextRender from '../Components/ContextRender';
+import Zustand from '../Components/Zustand';
 
 export default function Routes() {
   const { logged } = useContext(LoginContext);
@@ -28,6 +29,7 @@ export default function Routes() {
       <Route path="/reducer" component={Reducer} />
       <Route path="/context" component={ContextRender} />
       <Route path="/dnd" component={CompDND} />
+      <Route path="/zustand" component={Zustand} />
       <PrivateRoute path="/protected" auth={logged}>
         <Protected />
       </PrivateRoute>

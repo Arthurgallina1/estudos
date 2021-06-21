@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { LoginContext } from '../../LoginContext';
 
 export default function Comp1() {
-  console.log('rendersz');
   const { actFunc, active } = useContext(LoginContext);
   const func = () => {
     return 22;
